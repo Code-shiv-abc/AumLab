@@ -1,0 +1,21 @@
+{
+  "name": "AumLabs",
+  "short_name": "AumLabs",
+  "description": "Spirituality Meets Intelligent Creation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#5A1AFF",
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

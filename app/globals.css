@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* AumLabs Palette */
+  --color-cosmic-purple: #5A1AFF;
+  --color-cosmic-purple-light: #8A2EFF;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F4D06F;
+  --color-deep-black: #050505;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-gold {
+    color: var(--color-gold);
+  }
+  .text-cosmic {
+    color: var(--color-cosmic-purple);
+  }
+  .bg-cosmic-gradient {
+    background: linear-gradient(135deg, #000000 0%, #1a0b2e 100%);
+  }
+  .animate-glow {
+    filter: drop-shadow(0 0 8px rgba(90, 26, 255, 0.5));
+  }
+}
