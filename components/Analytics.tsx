@@ -1,10 +1,14 @@
 'use client';
 
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
 // import Script from 'next/script';
 
 export default function Analytics() {
   return (
     <>
+      {/* Vercel Web Analytics */}
+      <VercelAnalytics />
+
       {/* Google Analytics 4 - Placeholder */}
       {/*
         Uncomment and add your Measurement ID
