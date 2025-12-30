@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import clsx from 'clsx';
 
 export default function Navigation() {
@@ -35,11 +36,14 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-tighter group">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 group-hover:from-white group-hover:to-[var(--color-cosmic-purple-light)] transition-all duration-300">
-            Aum
-          </span>
-          <span className="text-[var(--color-cosmic-purple-light)] group-hover:text-white transition-colors duration-300">Labs</span>
+        <Link href="/" className="relative h-12 w-32 group">
+          <Image
+            src="/brand-logo.png"
+            alt="AumLabs Logo"
+            fill
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Links */}
