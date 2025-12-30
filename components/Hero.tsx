@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { content } from '@/data/content';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -26,13 +27,15 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="mb-8 inline-block"
+          className="mb-8 inline-block relative w-32 h-32"
         >
-            {/* Simple geometric logo placeholder */}
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto text-[var(--color-gold)]">
-                <path d="M12 2L2 22H22L12 2Z" stroke="currentColor" strokeWidth="1" fill="none" className="animate-[pulse_3s_infinite]"/>
-                <circle cx="12" cy="14" r="3" fill="currentColor" className="opacity-50"/>
-            </svg>
+            <Image
+              src="/brand-logo.png"
+              alt="AumLabs Logo"
+              fill
+              className="object-contain"
+              priority
+            />
         </motion.div>
 
         <motion.h1
