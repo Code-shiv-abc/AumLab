@@ -1,50 +1,49 @@
-'use client';
+import { Code2, PenTool, LayoutTemplate, Rocket } from 'lucide-react';
 
-import { motion } from 'framer-motion';
-import { content } from '@/data/content';
-import { Check } from 'lucide-react';
+const services = [
+  {
+    title: 'Frontend Development',
+    desc: 'Performant, scalable React & Next.js applications.',
+    icon: Code2,
+  },
+  {
+    title: 'UI/UX Design',
+    desc: 'Minimalist interfaces focused on conversion and clarity.',
+    icon: PenTool,
+  },
+  {
+    title: 'Design Systems',
+    desc: 'Scalable component libraries for consistent branding.',
+    icon: LayoutTemplate,
+  },
+  {
+    title: 'Technical Strategy',
+    desc: 'Architecture planning for long-term growth.',
+    icon: Rocket,
+  },
+];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-[var(--color-deep-black)] relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-cosmic-purple)]/20 to-transparent"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Services</h2>
-          <p className="text-gray-400">Premium solutions for the digital age.</p>
+    <section id="services" className="py-32 px-6 bg-white/[0.02]">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-20">
+          <span className="text-sm font-mono text-[var(--color-accent)] uppercase tracking-widest">
+            Expertise
+          </span>
+          <h2 className="mt-4 text-4xl font-bold text-white">How we help.</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {content.services.map((service, idx) => (
-            <motion.div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, idx) => (
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="p-8 md:p-10 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors rounded-2xl flex flex-col"
+              className="p-8 border border-white/5 rounded-2xl hover:border-white/10 hover:bg-white/[0.02] transition-colors"
             >
-              <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-              <p className="text-gray-400 mb-8 flex-grow">{service.description}</p>
-
-              <ul className="space-y-3">
-                {service.features.map((feature, fIdx) => (
-                  <li key={fIdx} className="flex items-center text-sm text-gray-300">
-                    <Check size={16} className="text-[var(--color-gold)] mr-3" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
-                 <span className="text-xs text-gray-500 uppercase tracking-widest">Starting from</span>
-                 <button className="text-[var(--color-cosmic-purple-light)] hover:text-white transition-colors font-medium text-sm">
-                   Inquire &rarr;
-                 </button>
-              </div>
-            </motion.div>
+              <service.icon className="w-8 h-8 text-[var(--color-accent)] mb-6" />
+              <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+              <p className="text-gray-400 leading-relaxed">{service.desc}</p>
+            </div>
           ))}
         </div>
       </div>
