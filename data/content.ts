@@ -116,7 +116,7 @@ export const content = {
     {
       title: "Aum Chat",
       category: "AI Agent",
-      description: "Personalized spiritual guidance bot trained on ancient texts.",
+      description: "Personalized spiritual guidance bot fine-tuned on ancient texts for deep, contextual wisdom.",
       imagePlaceholder: "bg-gradient-to-t from-purple-950 to-black",
     },
   ] as ProjectItem[],
