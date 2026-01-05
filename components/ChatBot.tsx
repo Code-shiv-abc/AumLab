@@ -98,7 +98,8 @@ export default function ChatBot() {
         onClick={() => setIsOpen(true)}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: isOpen ? 0 : 1, opacity: isOpen ? 0 : 1 }}
-        className="fixed bottom-6 right-6 z-50 p-4 bg-[var(--color-cosmic-purple)] text-white rounded-full shadow-lg hover:shadow-[0_0_20px_rgba(90,26,255,0.6)] hover:scale-110 transition-all duration-300 group"
+        className="fixed bottom-6 right-6 z-50 p-4 bg-[var(--color-cosmic-purple)] text-white rounded-full shadow-lg hover:shadow-[0_0_20px_rgba(90,26,255,0.6)] hover:scale-110 transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+        aria-label="Open chat assistant"
       >
         <MessageSquare size={24} className="group-hover:animate-pulse" />
       </motion.button>
@@ -112,6 +113,9 @@ export default function ChatBot() {
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             transition={{ duration: 0.3 }}
             className="fixed bottom-6 right-6 z-50 w-[90vw] md:w-[400px] h-[600px] max-h-[80vh] bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            role="dialog"
+            aria-label="Chat Assistant"
+            aria-modal="false"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-white/10 bg-white/5">
@@ -121,7 +125,7 @@ export default function ChatBot() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium text-sm">Aum Assistant</h3>
-                  <p className="text-[10px] text-gray-400 flex items-center gap-1">
+                  <p className="text-[10px] text-gray-300 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                     Online
                   </p>
@@ -129,14 +133,20 @@ export default function ChatBot() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded"
+                aria-label="Close chat"
               >
                 <X size={20} />
               </button>
             </div>
 
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+            <div
+              className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent"
+              role="log"
+              aria-live="polite"
+              aria-atomic="false"
+            >
               {messages.map((msg) => (
                 <div
                   key={msg.id}
@@ -184,7 +194,7 @@ export default function ChatBot() {
                         <button
                             key={idx}
                             onClick={() => handleSendMessage(suggestion)}
-                            className="flex-shrink-0 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-xs text-gray-300 transition-colors whitespace-nowrap"
+                            className="flex-shrink-0 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-xs text-gray-300 transition-colors whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-cosmic-purple)]"
                         >
                             {suggestion}
                         </button>
@@ -194,19 +204,22 @@ export default function ChatBot() {
 
             {/* Input Area */}
             <div className="p-4 bg-white/5 border-t border-white/10">
-              <div className="flex items-center gap-2 bg-black/50 border border-white/10 rounded-full px-4 py-2 focus-within:border-[var(--color-cosmic-purple)] transition-colors">
+              <div className="flex items-center gap-2 bg-black/50 border border-white/10 rounded-full px-4 py-2 focus-within:border-[var(--color-cosmic-purple)] transition-colors focus-within:ring-1 focus-within:ring-[var(--color-cosmic-purple)]/50">
+                <label htmlFor="chat-input" className="sr-only">Type your message</label>
                 <input
+                  id="chat-input"
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSendMessage(inputValue)}
                   placeholder="Ask anything..."
-                  className="flex-1 bg-transparent text-white text-sm focus:outline-none placeholder-gray-500"
+                  className="flex-1 bg-transparent text-white text-sm focus:outline-none placeholder-gray-400"
                 />
                 <button
                   onClick={() => handleSendMessage(inputValue)}
                   disabled={!inputValue.trim() || isTyping}
-                  className="p-1.5 bg-[var(--color-cosmic-purple)] text-white rounded-full hover:scale-105 active:scale-95 transition-all disabled:opacity-50 disabled:hover:scale-100"
+                  className="p-1.5 bg-[var(--color-cosmic-purple)] text-white rounded-full hover:scale-105 active:scale-95 transition-all disabled:opacity-50 disabled:hover:scale-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  aria-label="Send message"
                 >
                   <Send size={14} />
                 </button>

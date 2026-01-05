@@ -68,9 +68,11 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white focus:outline-none p-2 hover:text-[var(--color-gold)] transition-colors"
+              className="text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white p-2 hover:text-[var(--color-gold)] transition-colors rounded"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              <span className="sr-only">Menu</span>
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -86,6 +88,10 @@ export default function Navigation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl md:hidden pt-24 px-6 flex flex-col items-center"
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
           >
             <div className="flex flex-col items-center space-y-8 w-full max-w-sm">
               {navLinks.map((link, idx) => (
