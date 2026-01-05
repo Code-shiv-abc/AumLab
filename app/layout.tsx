@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { content } from "@/data/content";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
@@ -51,6 +52,7 @@ export default function RootLayout({
         {children}
         <ChatBot />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
