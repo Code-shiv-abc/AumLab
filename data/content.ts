@@ -165,6 +165,7 @@ export const content = {
   contact: {
     email: "cvamtiwari73@gmail.com",
     socials: [
+      { platform: "WhatsApp", url: "https://wa.me/1234567890", icon: "MessageCircle" },
       { platform: "Twitter", url: "#", icon: "Twitter" },
       { platform: "LinkedIn", url: "#", icon: "Linkedin" },
       { platform: "GitHub", url: "#", icon: "Github" },
