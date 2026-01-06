@@ -1,0 +1,16 @@
+
+> aumlabs@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+✓ Ready in 1034ms
+○ Compiling / ...
+ GET / 200 in 6.9s (compile: 6.2s, render: 689ms)
+ GET /noise.png 404 in 1875ms (compile: 1607ms, render: 268ms)
+ GET / 200 in 167ms (compile: 7ms, render: 160ms)
+ GET /noise.png 404 in 93ms (compile: 8ms, render: 86ms)
+ GET / 200 in 927ms (compile: 447ms, render: 479ms)

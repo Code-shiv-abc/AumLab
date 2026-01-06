@@ -1,11 +1,12 @@
 import { content } from '@/data/content';
 import Link from 'next/link';
-import { Twitter, Linkedin, Github, Link as LinkIcon } from 'lucide-react';
+import { Twitter, Linkedin, Github, MessageCircle, Link as LinkIcon } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
   Twitter,
   Linkedin,
   Github,
+  MessageCircle,
 };
 
 export default function Footer() {
