@@ -1,100 +1,65 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { content } from '@/data/content';
-import Link from 'next/link';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { content } from "@/data/content";
+import { Button } from "./ui/Button";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[var(--color-deep-black)]">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[var(--color-cosmic-purple)] opacity-20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-[var(--color-gold)] opacity-5 blur-[100px] rounded-full pointer-events-none" />
 
-      {/* Background: Sacred Geometry Pulse (CSS/SVG) */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[600px] h-[600px] border border-white/5 rounded-full animate-pulse opacity-30 absolute"></div>
-        <div className="w-[450px] h-[450px] border border-[var(--color-cosmic-purple)]/20 rounded-full animate-[spin_20s_linear_infinite] absolute"></div>
-        <div className="w-[300px] h-[300px] border border-[var(--color-gold)]/10 rounded-full absolute rotate-45"></div>
+      <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
 
-        {/* Gradient Mesh Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--color-cosmic-purple)] opacity-10 blur-[100px] rounded-full"></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
-
-        {/* Logo Mark */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="mb-8 inline-block relative w-32 h-32"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium tracking-wide text-gray-300 mb-8"
         >
-            <Image
-              src="/brand-logo.png"
-              alt="AumLabs Logo"
-              fill
-              className="object-contain"
-              priority
-            />
+          <Sparkles className="w-3 h-3 text-[var(--color-gold)]" />
+          <span>Available for New Projects</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500"
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto leading-[1.1]"
         >
-          {content.hero.headline}
+          Transforming Ideas into{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
+            Intelligent Digital Reality
+          </span>
         </motion.h1>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="flex flex-wrap justify-center gap-3 md:gap-6 mb-10 text-sm md:text-base text-[var(--color-cosmic-purple-light)] font-medium uppercase tracking-widest"
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          {content.hero.subHeadline.map((role, index) => (
-            <span key={role} className="flex items-center">
-              {role}
-              {index !== content.hero.subHeadline.length - 1 && (
-                <span className="ml-3 md:ml-6 w-1 h-1 bg-gray-700 rounded-full"></span>
-              )}
-            </span>
-          ))}
-        </motion.div>
+          {content.hero.subHeadline}
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
-          className="flex flex-col sm:flex-row justify-center gap-4"
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row items-center gap-4"
         >
-          <Link
-            href="#portfolio"
-            className="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-[var(--color-gold)] transition-colors duration-300"
-          >
+          <Button href="#contact" variant="primary" icon={<ArrowRight />}>
             {content.hero.cta.primary}
-          </Link>
-          <Link
-            href="#contact"
-            className="px-8 py-3 border border-white/20 text-white font-medium rounded-full hover:bg-white/10 hover:border-white transition-all duration-300"
-          >
+          </Button>
+          <Button href={content.contact.bookCallUrl} variant="secondary" external>
             {content.hero.cta.secondary}
-          </Link>
+          </Button>
         </motion.div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
-            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-        </svg>
-      </motion.div>
+      </div>
     </section>
   );
 }

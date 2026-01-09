@@ -1,26 +1,22 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Expertise from "@/components/Expertise";
-import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
+import Projects from "@/components/Projects";
+import WhyAumLab from "@/components/WhyAumLab";
 import Testimonials from "@/components/Testimonials";
-import ContactForm from "@/components/ContactForm";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen bg-black text-white selection:bg-[var(--color-cosmic-purple)] selection:text-white">
       <Navigation />
       <Hero />
-      <About />
-      <Expertise />
-      <Portfolio />
       <Services />
+      <Projects />
+      <WhyAumLab />
       <Testimonials />
-
-      <ContactForm />
-
+      <FinalCTA />
       <Footer />
     </main>
   );
