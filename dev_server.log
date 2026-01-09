@@ -1,0 +1,264 @@
+
+> aumlabs@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+✓ Ready in 1177ms
+⨯ TypeError: Cannot read properties of undefined (reading 'mission')
+    at About (components/About.tsx:49:36)
+  47 |
+  48 |             <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-8">
+> 49 |               &quot;{content.about.mission}&quot;
+     |                                    ^
+  50 |             </p>
+  51 |
+  52 |             <div className="space-y-6 text-gray-400 leading-loose text-sm md:text-base"> {
+  digest: '2808079696'
+}
+ GET / 500 in 1078ms (compile: 502ms, render: 577ms)
+⨯ TypeError: Cannot read properties of undefined (reading 'mission')
+    at About (components/About.tsx:49:36)
+  47 |
+  48 |             <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-8">
+> 49 |               &quot;{content.about.mission}&quot;
+     |                                    ^
+  50 |             </p>
+  51 |
+  52 |             <div className="space-y-6 text-gray-400 leading-loose text-sm md:text-base"> {
+  digest: '2808079696'
+}
+ GET / 500 in 112ms (compile: 6ms, render: 106ms)
+⨯ ./app/page.tsx:7:1
+Module not found: Can't resolve '@/components/FinalCTA'
+[0m [90m  5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {[0m
+
+Import map: aliased to relative './components/FinalCTA' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Module not found: Can't resolve '@/components/FinalCTA'
+[0m [90m  5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {[0m
+
+Import map: aliased to relative './components/FinalCTA' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/Projects'
+[0m [90m 2 |[39m [36mimport[39m [33mHero[39m [36mfrom[39m [32m"@/components/Hero"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/Projects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/Projects'
+[0m [90m 2 |[39m [36mimport[39m [33mHero[39m [36mfrom[39m [32m"@/components/Hero"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/Projects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/WhyAumLab'
+[0m [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/WhyAumLab' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/WhyAumLab'
+[0m [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/WhyAumLab' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Module not found: Can't resolve '@/components/FinalCTA'
+[0m [90m  5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {[0m
+
+Import map: aliased to relative './components/FinalCTA' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/page.tsx:4:1
+Module not found: Can't resolve '@/components/Projects'
+[0m [90m 2 |[39m [36mimport[39m [33mHero[39m [36mfrom[39m [32m"@/components/Hero"[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/Projects' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/WhyAumLab'
+[0m [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/WhyAumLab' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET / 500 in 1683ms (compile: 1070ms, render: 613ms)
+⨯ ./app/page.tsx:7:1
+Module not found: Can't resolve '@/components/FinalCTA'
+[0m [90m  5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {[0m
+
+Import map: aliased to relative './components/FinalCTA' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:7:1
+Module not found: Can't resolve '@/components/FinalCTA'
+[0m [90m  5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {[0m
+
+Import map: aliased to relative './components/FinalCTA' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/WhyAumLab'
+[0m [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/WhyAumLab' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.tsx:5:1
+Module not found: Can't resolve '@/components/WhyAumLab'
+[0m [90m 3 |[39m [36mimport[39m [33mServices[39m [36mfrom[39m [32m"@/components/Services"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mProjects[39m [36mfrom[39m [32m"@/components/Projects"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mWhyAumLab[39m [36mfrom[39m [32m"@/components/WhyAumLab"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mTestimonials[39m [36mfrom[39m [32m"@/components/Testimonials"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mFinalCTA[39m [36mfrom[39m [32m"@/components/FinalCTA"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mFooter[39m [36mfrom[39m [32m"@/components/Footer"[39m[33m;[39m[0m
+
+Import map: aliased to relative './components/WhyAumLab' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 10.2s
+○ Compiling / ...
+⨯ TypeError: Cannot read properties of undefined (reading 'map')
+    at <unknown> (components/Services.tsx:33:35)
+    at Array.map (<anonymous>)
+    at Services (components/Services.tsx:20:29)
+  31 |
+  32 |               <ul className="space-y-3">
+> 33 |                 {service.features.map((feature, fIdx) => (
+     |                                   ^
+  34 |                   <li key={fIdx} className="flex items-center text-sm text-gray-300">
+  35 |                     <Check size={16} className="text-[var(--color-gold)] mr-3" />
+  36 |                     {feature} {
+  digest: '3078831809'
+}
+ GET / 500 in 3.9s (compile: 3.3s, render: 539ms)
+✓ Compiled in 351ms
+ GET / 200 in 1751ms (compile: 1146ms, render: 605ms)
+ GET / 200 in 125ms (compile: 6ms, render: 119ms)

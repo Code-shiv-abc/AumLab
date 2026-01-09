@@ -1,51 +1,45 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { content } from '@/data/content';
-import { Check } from 'lucide-react';
+import { content } from "@/data/content";
+import * as LucideIcons from "lucide-react";
+import { LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-[var(--color-deep-black)] relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-cosmic-purple)]/20 to-transparent"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Services</h2>
-          <p className="text-gray-400">Premium solutions for the digital age.</p>
+    <section id="services" className="py-24 bg-black relative">
+      <div className="container mx-auto px-6">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
+          <div className="w-20 h-1 bg-[var(--color-cosmic-purple)] rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {content.services.map((service, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="p-8 md:p-10 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors rounded-2xl flex flex-col"
-            >
-              <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-              <p className="text-gray-400 mb-8 flex-grow">{service.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {content.services.map((service, index) => {
+             // Dynamically access the icon component
+             const IconComponent = (LucideIcons as unknown as Record<string, LucideIcon>)[service.icon];
 
-              <ul className="space-y-3">
-                {service.features.map((feature, fIdx) => (
-                  <li key={fIdx} className="flex items-center text-sm text-gray-300">
-                    <Check size={16} className="text-[var(--color-gold)] mr-3" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between">
-                 <span className="text-xs text-gray-500 uppercase tracking-widest">Starting from</span>
-                 <button className="text-[var(--color-cosmic-purple-light)] hover:text-white transition-colors font-medium text-sm">
-                   Inquire &rarr;
-                 </button>
-              </div>
-            </motion.div>
-          ))}
+             return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[var(--color-cosmic-purple)]/50 transition-colors duration-300"
+              >
+                <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 group-hover:bg-[var(--color-cosmic-purple)]/20 transition-colors">
+                   {IconComponent ? (
+                      <IconComponent className="w-6 h-6 text-gray-300 group-hover:text-[var(--color-cosmic-purple)] transition-colors" />
+                    ) : (
+                      <LucideIcons.Box className="w-6 h-6 text-gray-300" />
+                    )}
+                </div>
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-white transition-colors">{service.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
