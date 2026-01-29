@@ -18,7 +18,7 @@ export default function Footer() {
               Aum<span className="text-[var(--color-cosmic-purple)]">Lab</span>.
             </Link>
             <p className="text-gray-500 text-sm">
-              &copy; {currentYear} AumLabs. All rights reserved.
+              &copy; {currentYear} AumLab. All rights reserved.
             </p>
           </div>
 

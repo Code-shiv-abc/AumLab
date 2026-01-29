@@ -30,6 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto leading-[1.1]"
         >
+          <span className="sr-only">AumLab: </span>
           Transforming Ideas into{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
             Intelligent Digital Reality
