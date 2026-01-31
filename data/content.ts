@@ -36,8 +36,8 @@ export interface WhyItem {
 
 export const content = {
   meta: {
-    title: "AumLabs | Premium Web & AI Solutions",
-    description: "World-class web development and AI integration for premium brands. AumLabs converts visitors into clients with intelligent design.",
+    title: "AumLab | Premium Web & AI Solutions",
+    description: "World-class web development and AI integration for premium brands. AumLab converts visitors into clients with intelligent design.",
     siteUrl: "https://aumlabs.vercel.app",
   },
   hero: {
@@ -52,22 +52,22 @@ export const content = {
     {
       title: "Web Design & Development",
       icon: "Layout",
-      description: "Premium, responsive, and pixel-perfect websites built with Next.js.",
+      description: "Premium, responsive, and pixel-perfect websites built with Next.js, React, and Tailwind CSS.",
     },
     {
       title: "UX/UI & Experience Design",
       icon: "PenTool",
-      description: "User-centric interfaces that drive engagement and retention.",
+      description: "User-centric interfaces that drive engagement, retention, and brand loyalty.",
     },
     {
       title: "AI Tool Integration",
       icon: "Cpu",
-      description: "Seamless integration of LLMs and automation into your workflow.",
+      description: "Seamless integration of custom AI Agents, LLMs, and automation into your web workflow.",
     },
     {
       title: "Performance & SEO Optimization",
       icon: "Zap",
-      description: "Blazing fast load times and top-tier search engine ranking.",
+      description: "Blazing fast load times, Core Web Vitals compliance, and top-tier search engine ranking.",
     },
   ] as ServiceItem[],
   portfolio: [
@@ -125,7 +125,7 @@ export const content = {
     {
       name: "Sarah J.",
       role: "Tech Founder",
-      quote: "AumLabs brought a level of depth and intuition to our project that I didn't think was possible. Truly visionary.",
+      quote: "AumLab brought a level of depth and intuition to our project that I didn't think was possible. Truly visionary.",
       avatarPlaceholder: "SJ",
     },
     {

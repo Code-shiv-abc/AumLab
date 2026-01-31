@@ -17,10 +17,9 @@ export default function Navigation() {
   });
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Expertise', href: '#expertise' },
-    { name: 'Work', href: '#portfolio' },
+    { name: 'About', href: '#why-aumlab' },
     { name: 'Services', href: '#services' },
+    { name: 'Work', href: '#work' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -44,7 +43,7 @@ export default function Navigation() {
           <Link href="/" className="relative h-12 w-32 group" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
               src="/brand-logo.png"
-              alt="AumLabs Logo"
+              alt="AumLab Logo"
               fill
               className="object-contain"
               priority
