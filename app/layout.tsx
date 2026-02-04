@@ -1,18 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { content } from "@/data/content";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
 import ChatBot from "@/components/ChatBot";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
   subsets: ["latin"],
 });
 
@@ -98,7 +99,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--color-deep-black)] text-white overflow-x-hidden`}
+        className={`${inter.variable} ${poppins.variable} antialiased bg-[var(--color-deep-black)] text-white overflow-x-hidden font-sans`}
       >
         <script
           type="application/ld+json"
