@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <section id="work" className="py-24 bg-[#050505]">
+    <section id="work" className="py-24 bg-[var(--color-deep-black)]">
       <div className="container mx-auto px-6">
         <div className="flex items-end justify-between mb-16">
           <div>

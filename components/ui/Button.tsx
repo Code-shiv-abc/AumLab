@@ -24,11 +24,11 @@ export const Button: React.FC<ButtonProps> = ({
   icon,
   external = false
 }) => {
-  const baseStyles = "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 active:scale-95 text-sm md:text-base cursor-pointer";
+  const baseStyles = "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95 text-sm md:text-base cursor-pointer";
 
   const variants = {
-    primary: "bg-white text-black hover:bg-gray-200 border border-transparent shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]",
-    secondary: "bg-[var(--color-cosmic-purple)] text-white hover:bg-[var(--color-cosmic-purple-light)] border border-transparent shadow-[0_0_15px_rgba(90,26,255,0.3)] hover:shadow-[0_0_25px_rgba(90,26,255,0.5)]",
+    primary: "bg-white text-black hover:bg-gray-100 border border-transparent shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)]",
+    secondary: "bg-[var(--color-cosmic-purple)] text-white hover:bg-[var(--color-cosmic-purple-light)] border border-transparent shadow-[0_0_15px_rgba(90,26,255,0.3)] hover:shadow-[0_0_30px_rgba(90,26,255,0.6)]",
     outline: "bg-transparent text-white border border-white/20 hover:border-white/50 hover:bg-white/5",
     ghost: "bg-transparent text-gray-400 hover:text-white hover:bg-white/5",
   };
