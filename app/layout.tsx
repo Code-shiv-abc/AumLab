@@ -49,7 +49,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "AumLab",
-    image: `${content.meta.siteUrl}/brand-logo.png`,
+    image: `${content.meta.siteUrl}/brand-image.jpg`,
     description: content.meta.description,
     url: content.meta.siteUrl,
     email: content.contact.email,

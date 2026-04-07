@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { content } from "@/data/content";
 import { Button } from "./ui/Button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[var(--color-cosmic-purple)] opacity-20 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-[var(--color-gold)] opacity-5 blur-[100px] rounded-full pointer-events-none" />
@@ -50,7 +51,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center gap-4"
+          className="flex flex-col sm:flex-row items-center gap-4 mb-16"
         >
           <Button href="#contact" variant="primary" icon={<ArrowRight />}>
             {content.hero.cta.primary}
@@ -58,6 +59,23 @@ export default function Hero() {
           <Button href={content.contact.bookCallUrl} variant="secondary" external>
             {content.hero.cta.secondary}
           </Button>
+        </motion.div>
+
+        {/* Elevated Image Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+          className="relative w-full max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
+          <Image
+            src="/brand-image.jpg"
+            alt="AumLab Brand Identity"
+            fill
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            priority
+          />
         </motion.div>
 
       </div>

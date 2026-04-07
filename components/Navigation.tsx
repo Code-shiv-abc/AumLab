@@ -40,12 +40,12 @@ export default function Navigation() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative h-12 w-32 group" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/" className="relative h-12 w-12 group overflow-hidden rounded-full border border-white/10 hover:border-[var(--color-gold)] transition-colors duration-300" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
-              src="/brand-logo.png"
+              src="/brand-image.jpg"
               alt="AumLab Logo"
               fill
-              className="object-contain"
+              className="object-cover"
               priority
             />
           </Link>
